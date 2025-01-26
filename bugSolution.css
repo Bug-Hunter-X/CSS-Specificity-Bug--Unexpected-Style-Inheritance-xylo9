@@ -1,0 +1,19 @@
+To fix this, increase the specificity of the `.container p` selector. This can be done by adding a more specific parent selector or using the `!important` flag (though it's generally advised against using `!important` unless absolutely necessary). 
+
+Here's the corrected CSS:
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+.container p {
+  background-color: lightcoral; /* Fix: This will now override the less specific selector */
+}
+
+p {
+  background-color: lightgreen; 
+}
+```
+
+Alternatively, restructuring the HTML to avoid this conflict could be a cleaner solution.
