@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors:
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+.container p {
+  background-color: lightcoral;
+}
+
+p {
+  background-color: lightgreen; 
+}
+```
+
+In this example, all three selectors target paragraph elements within a `.container` div. However, the unexpected result is that the paragraph inherits the `lightgreen` background instead of the expected `lightcoral`. This happens because the selector `p` has higher specificity than `.container p`, overriding the more specific selector.
